@@ -4,6 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles.css" />
+    <script
+      src="https://kit.fontawesome.com/f9b9463a7b.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
     <title>Karl Patrick</title>
   </head>
   <body>
@@ -14,29 +22,35 @@
         <h4 class="banner-subtitle">Full Stack Developer</h4>
       </div>
       <ul class="social-link">
-        <li class="social-link-icon">Linked</li>
-        <li class="social-link-icon">Github</li>
-        <li class="social-link-icon">Twitter</li>
-        <li class="social-link-icon">Instagram</li>
-        <li class="social-link-icon">Facebook</li>
+        <a class="social-link-icon"><i class="fab fa-linkedin"></i></a>
+        <a class="social-link-icon"><i class="fab fa-github-square"></i></a>
+        <a class="social-link-icon"><i class="fab fa-twitter-square"></i></a>
+        <a class="social-link-icon">
+          <i class="fab fa-instagram-square"></i>
+        </a>
+        <a class="social-link-icon"><i class="fab fa-facebook-square"></i></a>
       </ul>
       <nav class="nav-link">
-        <a href="">Home</a>
-        <a href="">About</a>
-        <a href="">Professional</a>
-        <a href="">Portfolio</a>
-        <a href="">Contact</a>
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#professional">Professional</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
       </nav>
     </header>
     <!-- End Header -->
 
     <!-- Home section -->
     <main id="home">
-      <h1 class="home-title">Hello, I'm <span>Patrick</span></h1>
-      <p class="home-text">Here's who I am & what I do</p>
-      <div class="home-info">
-        <button id="download-resume">Download Resume</button>
-        <button id="send-me">Send Me</button>
+      <div class="home-container">
+        <h1 class="home-title">
+          Hello, I'm <span class="text-shadow">Patrick</span>
+        </h1>
+        <p class="home-text">Here's who I am & what I do</p>
+        <div class="home-info">
+          <button id="download-resume" class="shadow">Download Resume</button>
+          <button id="send-me" class="shadow">Send Me</button>
+        </div>
       </div>
     </main>
     <!-- End Home section -->
