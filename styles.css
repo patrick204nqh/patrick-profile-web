@@ -245,7 +245,7 @@ nav.nav-link a.active {
 }
 
 .about-container {
-  width: 50%;
+  max-width: 800px;
   height: 60%;
   margin: auto;
   background-color: #fffcf9;
@@ -253,7 +253,7 @@ nav.nav-link a.active {
 }
 
 .about-container .about-info {
-  width: 50%;
+  max-width: 50%;
   padding: 4rem 2.4rem;
 }
 
@@ -284,8 +284,136 @@ nav.nav-link a.active {
 /* ---------- Professional section --------------- */
 #professional {
   width: 100vw;
-  height: 100vh;
+  height: calc(100vh - 200px);
   background-color: #36383a;
+  /* margin-bottom: 10rem; */
+}
+
+.skills {
+  max-width: 800px;
+  margin: 4rem auto;
+  color: #fafafa;
+  display: flex;
+  flex-direction: column;
+}
+
+.skills li {
+  margin: 1.5rem auto;
+  width: 100%;
+  display: flex;
+}
+
+.skills li .skill-name {
+  width: 25%;
+  padding: 0 2rem;
+  text-align: right;
+}
+
+.skill-bar {
+  width: 75%;
+  height: 10px;
+  margin-top: 5px;
+}
+
+.skills li .skill-percent {
+  background-color: #4b88d8;
+  height: 100%;
+  position: relative;
+}
+
+.skills li .skill-percent::after {
+  content: ' ' attr(data-per) ' ';
+  position: absolute;
+  right: -3rem;
+  top: -0.4rem;
+}
+
+#html-css {
+  width: 90%;
+  animation: htmlcss 2s ease-in;
+}
+
+#vanilla-javascript {
+  width: 84%;
+  animation: js 2s ease-in;
+}
+
+#node-js {
+  width: 72%;
+  animation: node 2s ease-in;
+}
+
+#react {
+  width: 78%;
+  animation: react 2s ease-in;
+}
+
+#bootstrap {
+  width: 85%;
+  animation: bootstrap 2s ease-in;
+}
+
+#git {
+  width: 75%;
+  animation: git 2s ease-in;
+}
+
+@keyframes htmlcss {
+  0% {
+    width: 35px;
+  }
+  100% {
+    width: 90%;
+  }
+}
+
+@keyframes js {
+  0% {
+    width: 35px;
+  }
+  100% {
+    width: 84%;
+  }
+}
+
+@keyframes node {
+  0% {
+    width: 35px;
+  }
+  100% {
+    width: 72%;
+  }
+}
+
+@keyframes react {
+  0% {
+    width: 35px;
+  }
+  100% {
+    width: 78%;
+  }
+}
+
+@keyframes bootstrap {
+  0% {
+    width: 35px;
+  }
+  100% {
+    width: 85%;
+  }
+}
+
+@keyframes git {
+  0% {
+    width: 35px;
+  }
+  100% {
+    width: 75%;
+  }
 }
 
 /* ---------- End Professional section --------------- */
+
+/* ------------- Portfolio section ------------------ */
+
+/* ------------- End Portfolio section -------------- */
