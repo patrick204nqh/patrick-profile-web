@@ -681,20 +681,19 @@ footer p {
 
 @media (max-width: 820px) {
   nav.nav-link {
-    display: none;
     flex-direction: column;
     justify-content: flex-start;
     width: 100%;
     position: absolute;
-    transform: translateY(60%);
+    top: 100%;
     background-color: #36383a;
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
   }
 
-  /* nav.nav-link.open {
-    display: flex;
-    overflow: hidden;
-    position: fixed;
-  } */
+  nav.nav-link.open {
+    opacity: 1;
+  }
 
   nav.nav-link a {
     color: #cccccc;
