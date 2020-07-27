@@ -10,3 +10,5 @@ function scrollFunction() {
     header.classList.remove('header-hidden')
   }
 }
+
+// toggle navbar button
