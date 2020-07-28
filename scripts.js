@@ -29,6 +29,7 @@ window.onload = () => {
 
 let currentSlide = 0;
 
+
 window.onresize = () => {
   if (window.innerWidth < 820) {
     showSlide(currentSlide);
@@ -40,7 +41,6 @@ const showSlide = (current) => {
   currentSlide = current;
   if (current + 1 > slides.length) { currentSlide = 0; }
   if (current < 0) { currentSlide = slides.length - 1; }
-  console.log(current, slides.length, currentSlide)
   slides.forEach(slide => slide.classList.remove('show'));
   slides[currentSlide].classList.add('show');
 }

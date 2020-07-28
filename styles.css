@@ -85,7 +85,7 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 10;
   transition: all 0.2s ease-in-out;
 }
 
@@ -689,6 +689,10 @@ footer p {
 }
 
 @media (max-width: 820px) {
+  .home-container .home-info button#about-me {
+    display: none;
+  }
+
   nav.nav-link {
     flex-direction: column;
     justify-content: flex-start;
@@ -726,6 +730,7 @@ footer p {
 
   .portfolio-container {
     position: relative;
+    height: 100vh;
   }
 
   .portfolio-container a {
@@ -734,6 +739,7 @@ footer p {
 
   .portfolio-container a.show {
     display: flex;
+    z-index: 1;
   }
 
   .slider-container {
@@ -742,14 +748,15 @@ footer p {
     /* background-color: #fafafa; */
     width: 100%;
     justify-content: space-between;
-    bottom: 50%;
+    bottom: 75%;
     transform: translateY(50%);
-    font-size: 50px;
+    font-size: 20px;
   }
 
   .slider-container div {
     color: #cccccc;
     transition: all 0.2s ease-in-out;
+    cursor: pointer;
   }
 
   .slider-container div:hover {
@@ -757,7 +764,67 @@ footer p {
     text-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
   }
 
-  /* .slider-container .slide-left {
-    left: -100%;
+  #experience {
+    margin-top: 200px;
+  }
+
+  .experience-text {
+    display: none;
+  }
+
+  .experience-card {
+    margin: 0;
+    height: 8rem;
+  }
+
+  .experience-card .experience-title {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  /* .mountain {
+    height: 180vh;
   } */
+
+  .about-container {
+    height: 80%;
+  }
+
+  .about-container img {
+    display: none;
+  }
+
+  .about-container .about-info {
+    max-width: 100%;
+  }
+
+  #professional {
+    height: 100vh;
+  }
+
+  .skill-bar {
+    display: none;
+  }
+
+  .skills li .skill-name {
+    width: 100%;
+    text-align: center;
+    color: #00a1e4;
+  }
+
+  #contact {
+    max-width: 100%;
+  }
+
+  .contact-text,
+  .contact-details,
+  .contact-info {
+    display: none;
+  }
+
+  .contact-form {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
 }
