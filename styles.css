@@ -243,6 +243,14 @@ nav.nav-link a.active {
   transition: all 0.2s ease-out;
 }
 
+.home-container .home-info button a {
+  color: #fafafa;
+}
+
+.home-container .home-info button a:hover {
+  color: #5b96e4;
+}
+
 .home-container .home-info button:nth-child(2) {
   margin-left: 2rem;
 }
