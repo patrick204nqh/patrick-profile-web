@@ -90,4 +90,25 @@ links.forEach(link => {
   })
 });
 
+// handle click project
+const modal = document.querySelector('.modal');
+const projects = document.querySelectorAll('.slides');
+console.log(projects)
+
+modal.querySelector('.modal-container').querySelector('div').addEventListener('click', (e) => {
+  e.preventDefault();
+  modal.classList.remove('open');
+})
+
+projects.forEach(project => {
+  project.querySelector('i').addEventListener('click', (e) => {
+    e.preventDefault()
+    modal.classList.add('open');
+    let src = e.target.parentElement.querySelector('img').getAttribute('src');
+    modal.querySelector('img').setAttribute('src', src);
+    modal.querySelector('a').setAttribute('href', 'https://github.com/patrick204nqh');
+    console.log(e.target.parentElement);
+    // modal.querySelector('img').getAttribute('src');
+  })
+})
 
