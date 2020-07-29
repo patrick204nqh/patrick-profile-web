@@ -700,12 +700,12 @@ footer p {
     position: absolute;
     top: 100%;
     background-color: #36383a;
-    opacity: 0;
+    display: none;
     transition: all 0.2s ease-in-out;
   }
 
   nav.nav-link.open {
-    opacity: 1;
+    display: flex;
   }
 
   nav.nav-link a {
@@ -781,10 +781,6 @@ footer p {
     font-size: 20px;
     line-height: 30px;
   }
-
-  /* .mountain {
-    height: 180vh;
-  } */
 
   .about-container {
     height: 80%;

@@ -19,6 +19,22 @@ toggleButton.addEventListener('click', () => {
   navLink.classList.toggle('open')
 })
 
+const sections = document.querySelectorAll('section');
+
+sections.forEach(item => {
+  item.addEventListener('click', function (event) {
+    var isClickInside = navLink.contains(event.target);
+
+    if (!isClickInside) {
+      closeButton()
+    }
+  })
+});
+
+const closeButton = () => {
+  navLink.classList.remove('open');
+}
+
 // slideshow indicators
 
 window.onload = () => {
@@ -48,3 +64,30 @@ const showSlide = (current) => {
 const plusDiv = (n) => {
   showSlide(currentSlide += n)
 }
+
+// about-me button
+const aboutMe = document.getElementById('about-me');
+aboutMe.addEventListener('click', (e) => {
+  e.preventDefault();
+  window.location.assign('/#about')
+})
+
+// banner-name click
+const banner = document.getElementsByClassName('banner-name')[0];
+banner.addEventListener('click', (e) => {
+  e.preventDefault();
+  window.location.assign('/#home')
+})
+
+// handle nav click
+const links = document.querySelectorAll('.link');
+
+links.forEach(link => {
+  link.addEventListener('click', function () {
+    var current = document.getElementsByClassName("active")[0];
+    current.className = current.className.replace(" active", "");
+    this.className += " active";
+  })
+});
+
+
