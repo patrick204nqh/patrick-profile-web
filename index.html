@@ -276,16 +276,33 @@
             <p class="email"><span>Email: </span> patrick204nqh@gmail.com</p>
           </div>
         </div>
-        <form class="contact-form">
-          <input type="text" class="contact-group" placeholder="Your name" />
-          <input type="text" class="contact-group" placeholder="Your email" />
+        <form class="contact-form" onsubmit="handleSubmit()">
+          <input
+            type="text"
+            name="name"
+            class="contact-group"
+            placeholder="Your name"
+            required
+          />
+          <input
+            type="text"
+            name="email"
+            class="contact-group"
+            placeholder="Your email"
+            required
+          />
           <textarea
             cols="30"
             rows="2"
+            name="message"
             class="contact-group"
             placeholder="Message here"
+            required
           ></textarea>
-          <button class="contact-group send-button">Send message</button>
+          <button type="submit" class="contact-group send-button">
+            Send message
+          </button>
+          <p class="contact-error success-text"></p>
         </form>
       </div>
       <ul class="social-link">
@@ -322,5 +339,29 @@
     <!-- End Modal -->
 
     <script src="./scripts.js"></script>
+    <script>
+      // validation email
+      function ValidateEmail(mail) {
+        if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)) {
+          return true;
+        }
+        // alert('You have entered an invalid email address!');
+        return false;
+      }
+
+      function handleSubmit() {
+        const inputs = document.getElementsByClassName('contact-group');
+        // alert(inputs['email'].value);
+        let isEmail = ValidateEmail(inputs['email'].value);
+        let message = document.querySelector('.contact-error');
+        if (!isEmail) {
+          message.classList.add('error-text');
+          message.textContent = 'Your email is invalid, please again!';
+        } else {
+          message.classList.remove('error-text');
+          message.innerHTML = 'Successfully';
+        }
+      }
+    </script>
   </body>
 </html>

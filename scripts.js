@@ -93,7 +93,6 @@ links.forEach(link => {
 // handle click project
 const modal = document.querySelector('.modal');
 const projects = document.querySelectorAll('.slides');
-console.log(projects)
 
 modal.querySelector('.modal-container').querySelector('div').addEventListener('click', (e) => {
   e.preventDefault();
