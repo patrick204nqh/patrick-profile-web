@@ -856,9 +856,9 @@ footer p {
 }
 
 .modal-container {
-  width: 90%;
-  height: 60%;
-  margin: 25% auto;
+  width: 80vw;
+  height: 80vh;
+  margin: 10vh auto;
   position: relative;
 }
 
@@ -875,10 +875,12 @@ footer p {
   height: 2rem;
   font-size: 20px;
   text-align: center;
+  cursor: pointer;
 }
 
 .modal-container a {
   position: absolute;
+  cursor: pointer;
   right: 2rem;
   top: -2rem;
   width: 2rem;
